@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <Pattern>
+                %d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n
+            </Pattern>
+        </encoder>
+
+    </appender>
+
+
+    <appender name="ROLLING-FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>rencaiyinjin-rolling.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>6</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <Pattern>
+                %d [%thread] %-5level %logger - %msg%n
+            </Pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+
+        <!--日志文件最大的大小-->
+        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <MaxFileSize>10MB</MaxFileSize>
+        </triggeringPolicy>
+
+    </appender>
+
+
+    <appender name="ROLLING-FILE2" class="ch.qos.logback.core.rolling.RollingFileAppender">
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>rencaiyinjin-config-rolling.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>6</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <Pattern>
+                %d [%thread] %-5level %logger - %msg%n
+            </Pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+
+        <!--日志文件最大的大小-->
+        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <MaxFileSize>10MB</MaxFileSize>
+        </triggeringPolicy>
+
+    </appender>
+
+
+    <logger name="cn.gov" level="info"
+            additivity="false">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="ROLLING-FILE"/>
+
+    </logger>
+
+
+    <logger name="org.springframework" level="error"
+            additivity="false">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="ROLLING-FILE2"/>
+
+    </logger>
+
+    <logger name="org.hibernate" level="error"
+            additivity="false">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="ROLLING-FILE2"/>
+
+    </logger>
+
+
+    <root level="error">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="ROLLING-FILE2"/>
+    </root>
+
+
+</configuration>
