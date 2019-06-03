@@ -29,6 +29,8 @@
         <logback.version>1.2.3</logback.version>
         <jcl-over-slf4j.version>1.7.25</jcl-over-slf4j.version>
         <jstl.version>1.2</jstl.version>
+        <jackson.version>2.9.8</jackson.version>
+        <tomcat.verison>8.5.40</tomcat.verison>
     </properties>
 
     <!-- 设定除中央仓库(repo1.maven.org/maven2/)外的其他仓库,按设定顺序进行查找. -->
@@ -217,14 +219,14 @@
             <dependency>
                 <groupId>org.apache.tomcat.embed</groupId>
                 <artifactId>tomcat-embed-core</artifactId>
-                <version>8.5.31</version>
+                <version>${tomcat.verison}</version>
             </dependency>
 
 
             <dependency>
                 <groupId>org.apache.tomcat.embed</groupId>
                 <artifactId>tomcat-embed-jasper</artifactId>
-                <version>8.5.31</version>
+                <version>${tomcat.verison}</version>
                 <scope>provided</scope>
             </dependency>
 
@@ -434,21 +436,21 @@
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-annotations</artifactId>
-                <version>2.9.7</version>
+                <version>${jackson.version}</version>
             </dependency>
 
             <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-databind</artifactId>
-                <version>2.9.7</version>
+                <version>${jackson.version}</version>
             </dependency>
 
             <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-xml -->
             <dependency>
                 <groupId>com.fasterxml.jackson.dataformat</groupId>
                 <artifactId>jackson-dataformat-xml</artifactId>
-                <version>2.9.7</version>
+                <version>${jackson.version}</version>
             </dependency>
 
             <!-- 下面的是java与excle相关的jar包 ，poi，写入和导出 -->

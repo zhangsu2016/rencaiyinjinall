@@ -1,7 +1,8 @@
-package cn.gov.bjp;
+package cn.gov.bjp.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 
 @SpringBootApplication
 public class DemoApp {
