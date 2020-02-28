@@ -30,7 +30,7 @@
         <jcl-over-slf4j.version>1.7.25</jcl-over-slf4j.version>
         <jstl.version>1.2</jstl.version>
         <jackson.version>2.9.9</jackson.version>
-        <tomcat.verison>8.5.40</tomcat.verison>
+        <tomcat.verison>9.0.31</tomcat.verison>
     </properties>
 
     <!-- 设定除中央仓库(repo1.maven.org/maven2/)外的其他仓库,按设定顺序进行查找. -->
