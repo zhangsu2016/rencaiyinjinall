@@ -29,7 +29,7 @@
         <logback.version>1.2.3</logback.version>
         <jcl-over-slf4j.version>1.7.25</jcl-over-slf4j.version>
         <jstl.version>1.2</jstl.version>
-        <jackson.version>2.9.9</jackson.version>
+        <jackson.version>2.9.10.8</jackson.version>
         <tomcat.verison>8.5.40</tomcat.verison>
     </properties>
 
